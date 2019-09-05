@@ -4,7 +4,7 @@ Thanks for your interest in working with us! This little assignment is there to 
 
 ## Introduction
 
-The assignment is to build a SPA allowing to:
+The assignment's scope is to build a SPA allowing to:
 
 1. Pull a list of quotes from an API.
 2. Create a new quote.
@@ -12,20 +12,20 @@ The assignment is to build a SPA allowing to:
 4. Delete a quote.
 5. Write e2e tests using [cypress](https://www.cypress.io)
 
-This repos contains everything to get started, including:
+This repository contains everything to get started, including:
 
 1. A [create-react-app](https://facebook.github.io/create-react-app/docs/) to run the application in development mode.
 2. The [cypress](https://www.cypress.io/) testing suite.
 3. A local api to CRUD (Create Read Update Delete) the quotes.
 
-Please fork this repo and send us the url of your fork when you are done.
+Please fork this repository and send us the url of your fork when you are done.
 
 ## Notes
 
 A few notes on the implementation:
 
 1. Assume that the application will run in a modern browser only, so no need to worry much about compatibility.
-2. We kept the scope of work minimal on purpose, coming up with a polished design is definitely going to earn you more points than adding functionalities.
+2. We kept the scope of work minimal on purpose, coming up with a polished design will earn you more points than adding functionalities to the original scope.
 3. We will also pay attention on how you structure your e2e tests using [cypress](https://www.cypress.io).
 4. Take the time you need to complete the assignement, it's not a race.
 
@@ -33,7 +33,7 @@ If you have any questions or difficulties running the dev environment locally fe
 
 ## Getting started
 
-Make sure you have a version of `nodejs >= 10` before starting.
+Make sure you are running `nodejs >= 10` before starting.
 
 In the project directory, run: `yarn` to install all the dependencies. Then you can run the following commands:
 
@@ -51,7 +51,7 @@ Opens Cypress's electron app, useful when writing test as it reloads the test su
 
 ### `yarn cypress run`
 
-Executes the Cypress test suite in the terminal.
+Executes the Cypress test suite in the terminal (headless mode).
 
 ### `yarn api`
 
@@ -98,7 +98,7 @@ PUT    /quotes/{id}
 DELETE /quotes/{id}
 ```
 
-The folowing api features are not required for the assignement but here if you feel creative :)
+The following api features are not required for the assignement but are here if you feel creative :)
 
 ### Paginate
 
