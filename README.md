@@ -1,10 +1,42 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# CCN Quotes
 
-## Available Scripts
+Thanks for your interest working with us ! This little assignement is there to assess your React knowledge.
 
-In the project directory, you can run:
+## Introduction
 
-### `npm start`
+The assignment is to build a SPA allowing to:
+
+1. Pull a list of quotes from an API.
+2. Create a new quote.
+3. Update a quote.
+4. Delete a quote.
+5. Write e2e tests using [cypress](https://www.cypress.io)
+
+This repos contains everything to get started, including:
+
+1. A [create-react-app](https://facebook.github.io/create-react-app/docs/) to run the application in development mode.
+2. The [cypress](https://www.cypress.io/) testing suite.
+3. A local api to CRUD (Create Read Update Delete) the quotes.
+
+Please fork this repo and send us the url of your fork when you are done.
+
+## Notes
+
+A few notes on the implementation:
+
+1. Assume that the application will run in a modern browser only, so no need to worry much about compatibility.
+2. We kept the scope of work minimal on purpose, coming up with a polished design is definitely going to earn you more points than adding functionalities.
+3. We will also pay attention on how you structure your e2e tests using [cypress](https://www.cypress.io).
+
+If you have any questions or difficulties running the dev environment locally feel free to contact us.
+
+## Getting started
+
+Make sure you have a version of `nodejs >= 10` before starting.
+
+In the project directory, run: `yarn` to install all the dependencies. Then you can run the following commands:
+
+### `yarn start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -12,57 +44,82 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-### `npm test`
+### `yarn api`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Runs the api locally.<br>
+The api is available @ [http://localhost:3001](http://localhost:3001).
 
-### `npm run build`
+#### API Specification
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+All the data is persisted in the `db.json` file located at the root of the repository.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+The api consists in one entity, the `quote` object:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+{
+  id: int, //auto increment
+  author: string, // the quote author
+  body: string, // the quote text
+  source: string // the url pointing to the author profile
+}
+```
 
-### `npm run eject`
+The available endpoints are:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+// Get an array of quotes
+GET    /quotes
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+// Get a single quote by id
+GET    /quotes/{id}
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+// Create a new quote
+// Required field are author / body / source
+POST   /quotes
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+// Update a quote
+// Allowed parameters are author / body / source
+PUT    /quotes/{id}
 
-## Learn More
+// Delete a quote by id
+DELETE /quotes/{id}
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The folowing api features are not required for the assignement but here if you feel creative :)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Paginate
 
-### Code Splitting
+Use `_page` and optionally `_limit` to paginate returned data.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+In the `Link` header you'll get `first`, `prev`, `next` and `last` links.
 
-### Analyzing the Bundle Size
+```
+GET /quotes?_page=7
+GET /quotes?_page=7&_limit=20
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+_10 items are returned by default_
 
-### Making a Progressive Web App
+#### Sort
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Add `_sort` and `_order` (ascending order by default)
 
-### Advanced Configuration
+```
+GET /quotes?_sort=author&_order=asc
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+#### Full-text search
 
-### Deployment
+Add `q`
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+```
+GET /quotes?q=nyan
+```
 
-### `npm run build` fails to minify
+### `yarn cypress open`
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Opens Cypress's electron app, useful when writing tests as it reloads the test suite when editing a test.
+
+### `yarn cypress run`
+
+Executes the Cypress test suite in the terminal.
