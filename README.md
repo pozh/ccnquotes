@@ -1,6 +1,6 @@
 # CCN Quotes
 
-Thanks for your interest working with us ! This little assignment is there to assess your React knowledge.
+Thanks for your interest in working with us! This little assignment is there to assess your React knowledge.
 
 ## Introduction
 
@@ -47,7 +47,7 @@ You will also see any lint errors in the console.
 
 ### `yarn cypress open`
 
-Opens Cypress's electron app, useful when writing tests as it reloads the test suite when editing a test.
+Opens Cypress's electron app, useful when writing test as it reloads the test suite when editing a test.
 
 ### `yarn cypress run`
 
