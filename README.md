@@ -1,6 +1,6 @@
 # CCN Quotes
 
-Thanks for your interest working with us ! This little assignement is there to assess your React knowledge.
+Thanks for your interest working with us ! This little assignment is there to assess your React knowledge.
 
 ## Introduction
 
@@ -27,6 +27,7 @@ A few notes on the implementation:
 1. Assume that the application will run in a modern browser only, so no need to worry much about compatibility.
 2. We kept the scope of work minimal on purpose, coming up with a polished design is definitely going to earn you more points than adding functionalities.
 3. We will also pay attention on how you structure your e2e tests using [cypress](https://www.cypress.io).
+4. Take the time you need to complete the assignement, it's not a race.
 
 If you have any questions or difficulties running the dev environment locally feel free to contact us.
 
@@ -44,16 +45,26 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
+### `yarn cypress open`
+
+Opens Cypress's electron app, useful when writing tests as it reloads the test suite when editing a test.
+
+### `yarn cypress run`
+
+Executes the Cypress test suite in the terminal.
+
 ### `yarn api`
 
 Runs the api locally.<br>
 The api is available @ [http://localhost:3001](http://localhost:3001).
 
-#### API Specification
+## API Specification
 
-All the data is persisted in the `db.json` file located at the root of the repository.
+All the data is persisted in the `db.json` file located at the root of the repository. The api is built using [json-server](https://github.com/typicode/json-server)
 
-The api consists in one entity, the `quote` object:
+### Data model
+
+The data model includes a single entity, the `quote` object:
 
 ```
 {
@@ -63,6 +74,8 @@ The api consists in one entity, the `quote` object:
   source: string // the url pointing to the author profile
 }
 ```
+
+### Endpoints
 
 The available endpoints are:
 
@@ -87,7 +100,7 @@ DELETE /quotes/{id}
 
 The folowing api features are not required for the assignement but here if you feel creative :)
 
-#### Paginate
+### Paginate
 
 Use `_page` and optionally `_limit` to paginate returned data.
 
@@ -100,7 +113,7 @@ GET /quotes?_page=7&_limit=20
 
 _10 items are returned by default_
 
-#### Sort
+### Sort
 
 Add `_sort` and `_order` (ascending order by default)
 
@@ -108,18 +121,10 @@ Add `_sort` and `_order` (ascending order by default)
 GET /quotes?_sort=author&_order=asc
 ```
 
-#### Full-text search
+### Full-text search
 
 Add `q`
 
 ```
 GET /quotes?q=nyan
 ```
-
-### `yarn cypress open`
-
-Opens Cypress's electron app, useful when writing tests as it reloads the test suite when editing a test.
-
-### `yarn cypress run`
-
-Executes the Cypress test suite in the terminal.
