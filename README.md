@@ -1,16 +1,27 @@
 # CCN Quotes
 
-Thanks for your interest in working with us! This little assignment is there to assess your React knowledge.
+Thanks for your interest in working with us! This little assignment is here to assess your React knowledge, design skills, and testing style.
 
-## Introduction
+## Before you begin
 
-The assignment's scope is to build a SPA allowing to:
+A few logistics to get out of the way:
+
+- Please **clone the repo privately** - do not make your code public. Invite @fdidron and @ezuk as collaborators so we can look at your work. This is because you are not the only one currently doing this assignment.
+- This assignment is not paid.
+- Any code you write or designs you create for this assignment will remain under your complete ownership, and will never be used by CodeCode Ninja. In November 2019 you may release this code publicly or add it to your portfolio if you wish.
+- Before you begin, please let us know when you intend to complete the task.
+- **Questions are okay!** Feel free to reach out over email with any feedback or questions as you work through the process. Communication is essential when working remotely.
+
+## Introduction: What you'll be building
+
+A notes app! :) You're going to be making an SPA that lets the user:
 
 1. Pull a list of quotes from an API.
 2. Create a new quote.
 3. Update a quote.
 4. Delete a quote.
-5. Write e2e tests using [cypress](https://www.cypress.io)
+
+You will also write e2e tests using [cypress](https://www.cypress.io) to validate your work.
 
 This repository contains everything to get started, including:
 
@@ -18,18 +29,21 @@ This repository contains everything to get started, including:
 2. The [cypress](https://www.cypress.io/) testing suite.
 3. A local api to CRUD (Create Read Update Delete) the quotes.
 
-Please fork this repository and send us the url of your fork when you are done.
+## What we will (and won't) be looking at
 
-## Notes
+To evaluate your work, we will be looking at the following factors:
 
-A few notes on the implementation:
+- Code quality and readability
+- UX design: How your app feels in the browser
+- Commit messages (how granular and clear they are)
+- React best practices
+- Your Cypress tests (both style, and what you choose to test)
+- Your communication throughout the process (talk to us if blocked, let us know when you'll be completing it ahead of time, etc)
 
-1. Assume that the application will run in a modern browser only, so no need to worry much about compatibility.
-2. We kept the scope of work minimal on purpose, coming up with a polished design will earn you more points than adding functionalities to the original scope.
-3. We will also pay attention on how you structure your e2e tests using [cypress](https://www.cypress.io).
-4. Take the time you need to complete the assignement, it's not a race.
+We will *not* be looking at the following:
 
-If you have any questions or difficulties running the dev environment locally feel free to contact us.
+- You do not need to complete each and every thing in the app. You can do a large chunk of the work (and not all of it) and still win; we are looking at the quality. You need to do enough for us to get a clear sense of your style and quality.
+- You do not need to be the first to finish. This is not a race. Finish when you said you would.
 
 ## Getting started
 
@@ -60,7 +74,7 @@ The api is available @ [http://localhost:3001](http://localhost:3001).
 
 ## API Specification
 
-All the data is persisted in the `db.json` file located at the root of the repository. The api is built using [json-server](https://github.com/typicode/json-server)
+All the data is persisted in the `db.json` file located at the root of the repository. The API is built using [json-server](https://github.com/typicode/json-server)
 
 ### Data model
 
