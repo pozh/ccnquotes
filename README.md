@@ -1,5 +1,11 @@
 # CCN Quotes
 
+**Figma Prototype:** https://www.figma.com/file/mgDXo72A9VZWzCfq7obMlI/Untitled?node-id=1%3A3
+
+---
+
+# Original project description
+
 Thanks for your interest in working with us! This little assignment is here to assess your React knowledge, design skills, and testing style.
 
 ## Before you begin
