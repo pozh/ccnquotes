@@ -1,7 +1,13 @@
 import React from 'react';
+import QuoteList from './components/QuoteList';
+
 
 function CCNQuotes() {
-  return <h1>CCN Quotes</h1>;
+  return (
+    <div className="ccnquotes">
+      <QuoteList/>
+    </div>
+  )
 }
 
 export default CCNQuotes;
