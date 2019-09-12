@@ -5,7 +5,10 @@ import { Provider } from 'react-redux';
 import './index.css';
 import store from './redux/store';
 import App from './App';
+import {fetchQuotesApi} from './redux/actions';
 
+
+store.dispatch(fetchQuotesApi());
 
 ReactDOM.render(
   <Provider store={store}>

@@ -1,5 +1,8 @@
 import axios from 'axios';
 
+const API_URL = 'http://localhost:3001/quotes';
+
+
 /**
  * Functions to dispatch
  */
@@ -27,3 +30,14 @@ export const fetchQuotes = data => ({
   payload: { data }
 });
 
+export const fetchQuotesApi = () => {
+  return (dispatch) => {
+    return axios.get(API_URL)
+        .then(response => {
+          dispatch(fetchQuotes(response.data))
+        })
+        .catch(error => {
+          throw(error);
+        });
+  };
+};
