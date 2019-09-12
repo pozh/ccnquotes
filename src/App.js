@@ -1,5 +1,5 @@
 import React from 'react';
-import QuoteList from './components/QuoteList';
+import QuoteList from './components/quotes/QuoteList';
 
 
 function CCNQuotes() {
