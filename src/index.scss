@@ -1,0 +1,23 @@
+@import "assets/styles/reset";
+@import url('https://fonts.googleapis.com/css?family=Roboto|Satisfy&display=swap');
+
+html,
+body,
+#root,
+.ccnquotes{
+  height: 100%;
+}
+
+body {
+  background: url(assets/images/bg.jpg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+a {
+  color: white;
+}
