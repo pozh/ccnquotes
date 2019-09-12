@@ -1,5 +1,6 @@
 const initialState = {
   quotes: [],
+  selectedQuote: {},
 };
 
 
@@ -14,7 +15,17 @@ export default function (state = initialState, action) {
 
     case 'FETCH':
       return {...state, quotes: [...action.payload.data]};
-      break;
+
+    case 'VIEW':
+      const findId = action.payload.id;
+      return {
+        ...state,
+        quotes: [...state.quotes],
+        selectedQuote: state.quotes.filter(quote=>quote.id===findId)[0]
+      };
+
+    case 'CLOSE_VIEW':
+      return {...state, quotes: [...state.quotes], selectedQuote: {}};
 
     default:
       return state;
