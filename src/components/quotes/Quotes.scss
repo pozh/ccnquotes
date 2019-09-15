@@ -6,13 +6,61 @@
   opacity: .55;
   transition: opacity .4s;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    opacity: 1;
+
+    .quote__actions {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  & + & {
+    margin-top: 1rem;
+  }
+
+  &__body {
+  }
+
+  &__actions {
+    display: inline-block;
+    margin-left: 5px;
+    text-align: right;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s;
+  }
+}
+
+.quote-action {
+  background: transparent;
+  display: inline-block;
+  border: 0 none;
+  width: 20px;
+  height: 20px;
+  text-indent: -4000px;
+  cursor: pointer;
+  opacity: .7;
 
   &:hover {
     opacity: 1;
   }
 
+  &__edit {
+    background: url(../../assets/images/ico-edit.png);
+    background-size: 100%;
+  }
+
+  &__delete {
+    background: url(../../assets/images/ico-trash.png);
+    background-size: 100%;
+  }
+
   & + & {
-    margin-top: 1rem;
+    margin-left: 9px;
   }
 }
 
