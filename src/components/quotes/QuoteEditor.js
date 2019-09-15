@@ -56,7 +56,7 @@ class QuoteEditor extends React.Component {
             <div className="form__group">
               <label>Quote</label>
               <textarea name="body" className="form__control form__text" cols="30" rows="5"
-                        onChange={this.handleChange}>{this.state.quote.body}</textarea>
+                        onChange={this.handleChange} defaultValue={this.state.quote.body}/>
             </div>
             <button className="form__submit" type="submit">Submit</button>
           </form>
