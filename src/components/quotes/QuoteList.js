@@ -12,12 +12,19 @@ class QuoteList extends React.Component {
     super(props);
     this.state = {
       showForm: false,
+      quote: {},
     };
     this.toggleForm = this.toggleForm.bind(this);
+    this.editQuote = this.editQuote.bind(this);
   }
 
   toggleForm = () => {
-    this.setState(prevState => ({ showForm: !prevState.showForm }));
+    this.setState(prevState => ({ quote: {}, showForm: !prevState.showForm }));
+  };
+
+  editQuote = (quote) => {
+    this.toggleForm();
+    this.setState({ quote: quote});
   };
 
   render() {
@@ -27,11 +34,11 @@ class QuoteList extends React.Component {
           <div className="list__container">
             {quotes && quotes.length
                 ? quotes.map(quote => {
-                  return <Quote key={`quote-${quote.id}`} quote={quote}/>;
+                  return <Quote key={`quote-${quote.id}`} quote={quote} handleEditClick={this.editQuote}/>;
                 })
                 : "No quotes yet"}
           </div>
-          { this.state.showForm && <QuoteEditor closeClickHandler={this.toggleForm}/> }
+          { this.state.showForm && <QuoteEditor quote={this.state.quote} closeClickHandler={this.toggleForm}/> }
           { !this.state.showForm && (
             <div className="list__btn-add">
               <QuotesButton kind="btn-add" clickHandler={this.toggleForm}/>

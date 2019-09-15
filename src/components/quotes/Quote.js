@@ -4,12 +4,12 @@ import { viewQuote, deleteQuote } from "../../redux/actions";
 
 import './Quotes.scss';
 
-const Quote = ({ quote, editQuote, viewQuote, deleteQuote }) => (
+const Quote = ({ quote, handleEditClick, viewQuote, deleteQuote }) => (
   <div className="quote">
     <span className="quote__body" onClick={() => viewQuote(quote.id)}>{quote.body}</span>
     <span className="quote__actions">
       <button type="button" className="quote-action quote-action__edit"
-              onClick={() => editQuote(quote.id)}>Edit</button>
+              onClick={() => handleEditClick(quote)}>Edit</button>
       <button type="button" className="quote-action quote-action__delete"
               onClick={() => deleteQuote(quote.id)}>Delete</button>
     </span>

@@ -10,7 +10,7 @@ class QuoteEditor extends React.Component {
   constructor (props) {
     super(props);
     this.state={
-      quote: {},
+      quote: props.quote ? {...props.quote} : {},
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -44,18 +44,18 @@ class QuoteEditor extends React.Component {
               <label>Author</label>
               <input name="author" className="form__control"
                      type="text"
-                     value={this.state.author} onChange={this.handleChange}/>
+                     value={this.state.quote.author} onChange={this.handleChange}/>
             </div>
             <div className="form__group">
               <label>Source</label>
               <input name="source" className="form__control"
                      type="text"
-                     value={this.state.source} onChange={this.handleChange}/>
+                     value={this.state.quote.source} onChange={this.handleChange}/>
             </div>
             <div className="form__group">
               <label>Quote</label>
               <textarea name="body" className="form__control form__text" cols="30" rows="5"
-                        onChange={this.handleChange}>{this.state.body}</textarea>
+                        onChange={this.handleChange}>{this.state.quote.body}</textarea>
             </div>
             <button className="form__submit" type="submit">Submit</button>
           </form>
