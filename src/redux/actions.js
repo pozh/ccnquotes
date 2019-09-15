@@ -20,6 +20,11 @@ export const editQuote = content => ({
   }
 });
 
+export const deleteQuote = id => ({
+  type: 'DELETE',
+  payload: { id }
+});
+
 export const viewQuote = id => ({
   type: 'VIEW',
   payload: { id }

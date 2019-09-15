@@ -10,8 +10,10 @@ export default function (state = initialState, action) {
       return {...state, quotes: state.quotes.concat(action.data)};
 
     case 'DELETE':
-      const index = state.quotes.map(item => item.id).indexOf(action.id);
-      return {...state, quotes: [...state.quotes].splice(index, 1)};
+      const index = state.quotes.map(item => item.id).indexOf(action.payload.id);
+      let quotes = [...state.quotes];
+      quotes.splice(index, 1);
+      return {...state, quotes};
 
     case 'FETCH':
       return {...state, quotes: [...action.payload.data]};
