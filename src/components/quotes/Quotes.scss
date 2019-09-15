@@ -1,0 +1,65 @@
+// Single quote
+
+.quote {
+  opacity: .55;
+  transition: opacity .4s;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  & + & {
+    margin-top: 1rem;
+  }
+}
+
+
+// Quote list
+
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+  background: linear-gradient(90deg, rgba(0,0,0,.7), rgba(0,0,0,.3) 60%, rgba(0,0,0,0));
+  max-width: 38vw;
+  padding: 1.5rem 12vw 1.5rem 4vw;
+  padding-right: 12vw;
+  transition: all .3s ease;
+
+  &.list-selected {
+    transform: translateX(-480px);
+  }
+}
+
+
+// Quote view
+
+.quote-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: rgba(0,0,0,.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .5s, visibility .5s;
+  text-align: center;
+  padding: 0 15vw;
+
+  &_active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__body {
+    font-family: Satisfy, serif;
+    font-size: 3rem;
+  }
+}

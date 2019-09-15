@@ -1,4 +1,4 @@
-@import "assets/styles/reset";
+@import "reset";
 @import url('https://fonts.googleapis.com/css?family=Roboto|Satisfy&display=swap');
 
 html,
@@ -9,7 +9,7 @@ body,
 }
 
 body {
-  background: url(assets/images/bg.jpg) no-repeat;
+  background: url(../images/bg.jpg) no-repeat;
   background-size: cover;
   background-attachment: fixed;
   color: white;

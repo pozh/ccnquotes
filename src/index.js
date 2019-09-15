@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
-import './index.scss';
+import './assets/styles/index.scss';
 import store from './redux/store';
 import App from './App';
 import {fetchQuotesApi} from './redux/actions';

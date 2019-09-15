@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Quote from "./Quote";
 
-import './QuoteList.scss';
+import './Quotes.scss';
 
 const QuoteList = ({ quotes }) => (
     <div className="list">
