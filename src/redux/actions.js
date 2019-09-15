@@ -10,10 +10,10 @@ export const showAddForm = () => ({
   type: 'ADD_FORM'
 });
 
-export const addQuote = content => ({
+export const addQuote = quote => ({
   type: 'ADD',
   payload: {
-    content
+    quote
   }
 });
 

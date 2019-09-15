@@ -16,8 +16,7 @@ class QuoteList extends React.Component {
     this.toggleForm = this.toggleForm.bind(this);
   }
 
-  toggleForm = (e) => {
-    e.preventDefault();
+  toggleForm = () => {
     this.setState(prevState => ({ showForm: !prevState.showForm }));
   };
 
