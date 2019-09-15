@@ -25,6 +25,10 @@ export const viewQuote = id => ({
   payload: { id }
 });
 
+export const closeView = () => ({
+  type: 'CLOSE_VIEW'
+});
+
 export const fetchQuotes = data => ({
   type: 'FETCH',
   payload: { data }
