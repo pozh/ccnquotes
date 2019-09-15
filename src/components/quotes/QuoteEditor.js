@@ -7,6 +7,7 @@ import './Quotes.scss';
 
 const QuoteEditor = ({closeForm}) => {
   return (
+    <div className="form-wrapper">
       <div className="form">
         <div className="form__close">
           <QuotesButton kind="btn-close" clickHandler={closeForm}/>
@@ -27,6 +28,7 @@ const QuoteEditor = ({closeForm}) => {
           <button className="form__submit" type="submit">Submit</button>
         </form>
       </div>
+    </div>
   )
 }
 
