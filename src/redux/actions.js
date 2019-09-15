@@ -6,10 +6,6 @@ const API_URL = 'http://localhost:3001/quotes';
 /**
  * Functions to dispatch
  */
-export const showAddForm = () => ({
-  type: 'ADD_FORM'
-});
-
 export const addQuote = quote => ({
   type: 'ADD',
   payload: {

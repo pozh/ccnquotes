@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { editQuote, viewQuote, deleteQuote } from "../../redux/actions";
+import { viewQuote, deleteQuote } from "../../redux/actions";
 
 import './Quotes.scss';
 
@@ -16,4 +16,4 @@ const Quote = ({ quote, editQuote, viewQuote, deleteQuote }) => (
   </div>
 );
 
-export default connect(null, { editQuote, viewQuote, deleteQuote })(Quote);
+export default connect(null, { viewQuote, deleteQuote })(Quote);
