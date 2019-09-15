@@ -1,6 +1,6 @@
 const initialState = {
   quotes: [],
-  selectedQuote: {},
+  selectedQuote: null,
 };
 
 
@@ -25,7 +25,7 @@ export default function (state = initialState, action) {
       };
 
     case 'CLOSE_VIEW':
-      return {...state, quotes: [...state.quotes], selectedQuote: {}};
+      return {...state, quotes: [...state.quotes], selectedQuote: null};
 
     default:
       return state;
