@@ -5,12 +5,12 @@ import QuotesButton from '../ui/QuotesButton';
 
 import './Quotes.scss';
 
-const QuoteEditor = ({closeForm}) => {
+const QuoteEditor = ({closeClickHandler}) => {
   return (
     <div className="form-wrapper">
       <div className="form">
         <div className="form__close">
-          <QuotesButton kind="btn-close" clickHandler={closeForm}/>
+          <QuotesButton kind="btn-close" clickHandler={closeClickHandler}/>
         </div>
         <form onSubmit={()=>addQuote('')}>
           <div className="form__group">
