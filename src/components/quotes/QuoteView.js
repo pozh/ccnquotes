@@ -10,6 +10,7 @@ const QuoteView = ({ selectedQuote, closeView }) => {
       <span className="btn-close" onClick={closeView} />
       <h1 className="quote-view__body">{selectedQuote.body}</h1>
       <h2 className="quote-view__author">{selectedQuote.author}</h2>
+      <a target="_blank" rel="noopener noreferrer" className="quote-view__link" href={selectedQuote.source}> </a>
     </div>
   );
   return (<div className="quote-view"> </div>)

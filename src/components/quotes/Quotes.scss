@@ -27,7 +27,6 @@
   background: linear-gradient(90deg, rgba(0,0,0,.7), rgba(0,0,0,.3) 60%, rgba(0,0,0,0));
   max-width: 38vw;
   padding: 1.5rem 12vw 1.5rem 4vw;
-  padding-right: 12vw;
   transition: all .3s ease;
 
   &.list-selected {
@@ -63,6 +62,25 @@
   &__body {
     font-family: Satisfy, serif;
     font-size: 3rem;
+  }
+
+  &__author {
+    margin-top: 1.2rem;
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, .6);
+  }
+
+  &__link {
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background: url(../../assets/images/link.png);
+    margin-top: 1.2rem;
+    opacity: .7;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
   .btn-close {
