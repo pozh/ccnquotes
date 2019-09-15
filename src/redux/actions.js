@@ -13,10 +13,10 @@ export const addQuote = quote => ({
   }
 });
 
-export const editQuote = content => ({
+export const editQuote = quote => ({
   type: 'EDIT',
   payload: {
-    content
+    quote
   }
 });
 

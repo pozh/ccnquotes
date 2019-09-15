@@ -14,10 +14,10 @@ export default function (state = initialState, action) {
       return {...state, quotes: [...state.quotes, newQuote]};
 
     case 'EDIT':
-      return {
-        quotes: [...state.quotes],
-        selectedQuote: state.quotes.filter(quote=>quote.id===action.payload.id)[0],
-      };
+      const newQuotes = [...state.quotes];
+      const idx = newQuotes.findIndex(quote => quote.id===action.payload.quote.id);
+      newQuotes[idx] = {...action.payload.quote};
+      return {...state, quotes: newQuotes};
 
     case 'DELETE':
       const index = state.quotes.map(item => item.id).indexOf(action.payload.id);

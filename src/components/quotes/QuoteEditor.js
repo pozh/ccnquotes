@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addQuote } from '../../redux/actions'
+import { addQuote, editQuote } from '../../redux/actions'
 import QuotesButton from '../ui/QuotesButton';
 
 import './Quotes.scss';
@@ -25,8 +25,9 @@ class QuoteEditor extends React.Component {
     const {closeClickHandler} = this.props;
 
     e.preventDefault();
-    const { addQuote } = this.props;
-    addQuote(this.state.quote);
+    const { addQuote, editQuote } = this.props;
+    if (this.state.quote.id) editQuote(this.state.quote);
+    else addQuote(this.state.quote);
     this.setState({quote: {}});
     closeClickHandler();
   }
@@ -65,4 +66,4 @@ class QuoteEditor extends React.Component {
   }
 }
 
-export default connect(null, { addQuote })(QuoteEditor)
+export default connect(null, { addQuote, editQuote })(QuoteEditor)
