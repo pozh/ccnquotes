@@ -1,3 +1,5 @@
+@import "../../assets/styles/mixins";
+
 // Single quote
 
 .quote {
@@ -61,5 +63,12 @@
   &__body {
     font-family: Satisfy, serif;
     font-size: 3rem;
+  }
+
+  .btn-close {
+    @include btn-base;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
   }
 }
